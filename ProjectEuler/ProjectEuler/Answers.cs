@@ -21,9 +21,7 @@ namespace ProjectEuler
         private static int RunProblem1()
         {
             var multiplesOf3 = GetMultiplesBelowANumber(3, 1000);
-            Console.WriteLine(string.Join(", ", multiplesOf3));
             var multiplesOf5 = GetMultiplesBelowANumber(5, 1000);
-            Console.WriteLine(string.Join(", ", multiplesOf5));
             var distinct = multiplesOf3.Concat(multiplesOf5).Distinct();
             return distinct.Sum();
         }
