@@ -16,5 +16,16 @@ namespace ProjectEuler
         {
             return !GetFactors(number).Any();
         }
+        private static int GetNthPrime(int n)
+        {
+            var nthPrime = 0;
+            var num = 1;
+            while (nthPrime != n)
+            {
+                num++;
+                if (IsPrime(num)) nthPrime++;
+            }
+            return num;
+        }
     }
 }

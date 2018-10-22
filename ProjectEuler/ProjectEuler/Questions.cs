@@ -18,6 +18,7 @@ namespace ProjectEuler
                 case 4: return question4;
                 case 5: return question5;
                 case 6: return question6;
+                case 7: return question7;
                 default: return $"No description has been entered for problem #{problemNo} yet";
             }
         }
@@ -45,5 +46,8 @@ The square of the sum of the first ten natural numbers is,
 (1 + 2 + ... + 10)^2 = 55^2 = 3025
 Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is 3025 − 385 = 2640.
 Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.";
+        private static string question7 => $@"
+By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+What is the 10 001st prime number?";
     }
 }

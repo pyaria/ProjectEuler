@@ -18,6 +18,7 @@ namespace ProjectEuler
                 case 4: return RunProblem4();
                 case 5: return RunProblem5();
                 case 6: return RunProblem6();
+                case 7: return RunProblem7();
                 default: return "Problem not yet solved/implemented/in system";
             }
         }
@@ -35,5 +36,6 @@ namespace ProjectEuler
             => GetLowestCommonMultipleForVariableInts(Enumerable.Range(startNumber, endNumber).ToArray());
         private static long RunProblem6(int startNumber = 1, int endNumber = 100) 
             => (long)(GetSquareOfSums(startNumber, endNumber) - GetSumOfSquares(startNumber, endNumber));
+        private static int RunProblem7(int nthPrime = 10001) => GetNthPrime(nthPrime);
     }
 }
