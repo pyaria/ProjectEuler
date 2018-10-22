@@ -10,10 +10,11 @@ namespace ProjectEuler
     {
         static void Main(string[] args)
         {
+            args = new string[1] { "3" };
             var problemNo = int.Parse(args[0]);
             var question = Questions.GetQuestion(problemNo);
-            var answer = Answers.GetAnswer(problemNo);
             Console.WriteLine(question);
+            var answer = Answers.GetAnswer(problemNo);
             Console.WriteLine(answer);
             Console.Read();
         }
