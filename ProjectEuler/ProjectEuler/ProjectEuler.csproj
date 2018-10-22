@@ -78,6 +78,7 @@
     <Compile Include="Factors.cs" />
     <Compile Include="Fibonnaci.cs" />
     <Compile Include="Multiples.cs" />
+    <Compile Include="Palindrome.cs" />
     <Compile Include="Primes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

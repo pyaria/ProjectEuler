@@ -26,5 +26,19 @@ namespace ProjectEuler
                 i++;
             }
         }
+        private static IEnumerable<int> GetDistinctMultiples(int startNumber, int endNumber)
+        {
+            return Enumerable.Range(startNumber, endNumber - startNumber)
+                .Reverse()
+                .SelectMany(e => TraverseMultiples(startNumber, e));
+        }
+        private static IEnumerable<int> TraverseMultiples(int startNumber, int endNumber)
+        {
+            for (var i = endNumber; i >= startNumber; i--)
+            {
+                yield return endNumber * i;
+                if (startNumber == i) break;
+            }
+        }
     }
 }

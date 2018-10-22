@@ -15,6 +15,7 @@ namespace ProjectEuler
                 case 1: return RunProblem1();
                 case 2: return RunProblem2();
                 case 3: return RunProblem3();
+                case 4: return RunProblem4();
                 default: return "Problem not yet solved/implemented/in system";
             }
         }
@@ -33,6 +34,10 @@ namespace ProjectEuler
         private static int RunProblem3()
         {
             return GetLargestPrimeFactor(600851475143);
+        }
+        private static int RunProblem4()
+        {
+            return GetDistinctMultiples(100, 1000).Where(IsPalindrome).Max();
         }
     }
 }
