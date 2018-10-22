@@ -25,10 +25,15 @@ namespace ProjectEuler
             .Concat(GetMultiplesBelowANumber(5, 1000))
             .Distinct()
             .Sum();
-        private static int RunProblem2() => GetEvenFibonnaci(4000000).Sum();
-        private static int RunProblem3() => GetLargestPrimeFactor(600851475143);
-        private static int RunProblem4() => GetDistinctMultiples(100, 1000).Where(IsPalindrome).Max();
-        private static int RunProblem5() => GetLowestCommonMultipleForVariableInts(Enumerable.Range(1, 20).ToArray());
-        private static long RunProblem6() => (long)(GetSquareOfSums(1, 100) - GetSumOfSquares(1, 100));
+        private static int RunProblem2(int fibonnaciUpTo = 4000000) => GetEvenFibonnaci(fibonnaciUpTo).Sum();
+        private static int RunProblem3(long number = 600851475143) => GetLargestPrimeFactor(number);
+        private static int RunProblem4(int startNumber = 100, int endNumber = 1000) 
+            => GetDistinctMultiples(startNumber, endNumber)
+            .Where(IsPalindrome)
+            .Max();
+        private static int RunProblem5(int startNumber = 1, int endNumber = 20) 
+            => GetLowestCommonMultipleForVariableInts(Enumerable.Range(startNumber, endNumber).ToArray());
+        private static long RunProblem6(int startNumber = 1, int endNumber = 100) 
+            => (long)(GetSquareOfSums(startNumber, endNumber) - GetSumOfSquares(startNumber, endNumber));
     }
 }
