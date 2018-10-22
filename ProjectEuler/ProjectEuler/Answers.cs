@@ -17,6 +17,7 @@ namespace ProjectEuler
                 case 3: return RunProblem3();
                 case 4: return RunProblem4();
                 case 5: return RunProblem5();
+                case 6: return RunProblem6();
                 default: return "Problem not yet solved/implemented/in system";
             }
         }
@@ -28,5 +29,6 @@ namespace ProjectEuler
         private static int RunProblem3() => GetLargestPrimeFactor(600851475143);
         private static int RunProblem4() => GetDistinctMultiples(100, 1000).Where(IsPalindrome).Max();
         private static int RunProblem5() => GetLowestCommonMultipleForVariableInts(Enumerable.Range(1, 20).ToArray());
+        private static long RunProblem6() => (long)(GetSquareOfSums(1, 100) - GetSumOfSquares(1, 100));
     }
 }
