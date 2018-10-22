@@ -16,28 +16,17 @@ namespace ProjectEuler
                 case 2: return RunProblem2();
                 case 3: return RunProblem3();
                 case 4: return RunProblem4();
+                case 5: return RunProblem5();
                 default: return "Problem not yet solved/implemented/in system";
             }
         }
-        private static int RunProblem1()
-        {
-            var multiplesOf3 = GetMultiplesBelowANumber(3, 1000);
-            var multiplesOf5 = GetMultiplesBelowANumber(5, 1000);
-            var distinct = multiplesOf3.Concat(multiplesOf5).Distinct();
-            return distinct.Sum();
-        }
-        private static int RunProblem2()
-        {
-            var fibonnaciSeq = GetEvenFibonnaci(4000000);
-            return fibonnaciSeq.Sum();
-        }
-        private static int RunProblem3()
-        {
-            return GetLargestPrimeFactor(600851475143);
-        }
-        private static int RunProblem4()
-        {
-            return GetDistinctMultiples(100, 1000).Where(IsPalindrome).Max();
-        }
+        private static int RunProblem1() => GetMultiplesBelowANumber(3, 1000)
+            .Concat(GetMultiplesBelowANumber(5, 1000))
+            .Distinct()
+            .Sum();
+        private static int RunProblem2() => GetEvenFibonnaci(4000000).Sum();
+        private static int RunProblem3() => GetLargestPrimeFactor(600851475143);
+        private static int RunProblem4() => GetDistinctMultiples(100, 1000).Where(IsPalindrome).Max();
+        private static int RunProblem5() => GetLowestCommonMultipleForVariableInts(Enumerable.Range(1, 20).ToArray());
     }
 }
