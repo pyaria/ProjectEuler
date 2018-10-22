@@ -34,21 +34,5 @@ namespace ProjectEuler
         {
             return GetLargestPrimeFactor(600851475143);
         }
-        private static int GetLargestPrimeFactor(long parentNumber)
-        {
-            return GetFactors(parentNumber).Where(IsPrime).Last();
-        }
-        private static bool IsPrime(int number)
-        {
-            return !GetFactors(number).Any();
-        }
-        private static IEnumerable<int> GetFactors(long number)
-        {
-            var sqrt = (int)Math.Sqrt(number);
-            for (var i = 2; i <= sqrt; i++)
-            {
-                if (number % i == 0) yield return i;
-            }
-        }
     }
 }
