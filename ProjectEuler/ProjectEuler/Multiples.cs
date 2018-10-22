@@ -40,5 +40,20 @@ namespace ProjectEuler
                 if (startNumber == i) break;
             }
         }
+        private static int GetLowestCommonMultipleForVariableInts(params int[] ints)
+        {
+            return ints.Aggregate((currentMultiple, nextNumber) => GetLowestCommonMultipleForTwoInts(currentMultiple, nextNumber));
+        }
+        private static int GetLowestCommonMultipleForTwoInts(int a, int b)
+        {
+            var multipleA = a;
+            var multipleB = b;
+            while (multipleA != multipleB)
+            {
+                if (multipleA > multipleB) multipleB += b;
+                else multipleA += a;
+            }
+            return multipleA;
+        }
     }
 }
